@@ -54,5 +54,5 @@ All customizable parameters are stored in the `constants.py` file. Below are the
 
 ## Example Output
 
-![Example Output](Screenshot_2024.png)
+![Example Output](test/Screenshot_2024.png)
 Example of object tracking and counting.
