@@ -39,9 +39,15 @@ while cap.isOpened():
 
             # Draw object details
             cv2.circle(frame, (cx, cy), CIRCLE_RADIUS, CIRCLE_COLOR, -1)
-            cv2.putText(frame, f"ID: {track_id} {class_name}", (x1, y1 - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, FONT_SCALE, FONT_COLOR, 2)
+            # Make Shadow by adding white and Black together
+            cv2.putText(frame, f"ID: {track_id} {class_name}", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, FONT_SCALE, FONT_SHADOW_COLOR_BLACK, 3)  # Shadow
+            cv2.putText(frame, f"ID: {track_id} {class_name}", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, FONT_SCALE, FONT_SHADOW_COLOR_WHITE, 1)  # Main text
+
             cv2.rectangle(frame, (x1, y1), (x2, y2), RECTANGLE_COLOR, 2)
+
+            # FPS Counter
+            fps = cap.get(cv2.CAP_PROP_FPS)
+            cv2.putText(frame, f"FPS: {fps:.0f}", (30, frame.shape[0] - 30), cv2.FONT_HERSHEY_SIMPLEX, FONT_FPS_SCALE , FPS_COLOR, 2)
 
             # Update counters if the object crosses the line
             if cy > CROSSING_LINE_Y and track_id not in crossed_ids:
