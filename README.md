@@ -21,16 +21,17 @@ This project demonstrates real-time object tracking and counting using the YOLO 
 
 ### 1. Clone the Repository
 
-````bash
+```bash
 git clone https://github.com/AmmarMohamed0/CrossTracker.git
 cd CrossTracker
-````
+```
 
 ### 2. Install Dependencies
+
 Make sure you have Python 3.7+ installed. Then, install the required packages:
 
 ```bash
-pip install -r requirements.txt 
+pip install -r requirements.txt
 ```
 
 ## Configuration
@@ -38,17 +39,20 @@ pip install -r requirements.txt
 All customizable parameters are stored in the `constants.py` file. Below are the key parameters you can adjust:
 
 ### Video and Model Paths:
+
 - **VIDEO_FILE_PATH**: Path to the video file.
 - **MODEL_PATH**: Path to the YOLO model file.
 
 ### Detection Parameters:
+
 - **OBJECT_CLASSES**: List of classes to detect.
 - **CROSSING_LINE_Y**: Y-coordinate of the line for counting.
 
 ### Display Settings:
+
 - Colors, font size, and positions for text and shapes.
 
 ## Example Output
-![Example Output](test/Screenshot 2024.png)
-*Example of object tracking and counting.*
-````
+
+![Example Output](Screenshot 2024.png)
+Example of object tracking and counting.
