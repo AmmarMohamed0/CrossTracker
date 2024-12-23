@@ -24,12 +24,14 @@ This project demonstrates real-time object tracking and counting using the YOLO 
 ````bash
 git clone https://github.com/AmmarMohamed0/CrossTracker.git
 cd CrossTracker
+````
 
 ### 2. Install Dependencies
 Make sure you have Python 3.7+ installed. Then, install the required packages:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt 
+```
 
 ## Configuration
 
@@ -47,6 +49,6 @@ All customizable parameters are stored in the `constants.py` file. Below are the
 - Colors, font size, and positions for text and shapes.
 
 ## Example Output
-![Example Output](test\Screenshot 2024.png)
+![Example Output](test/Screenshot 2024.png)
 *Example of object tracking and counting.*
 ````
